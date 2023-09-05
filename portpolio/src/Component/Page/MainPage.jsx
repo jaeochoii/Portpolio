@@ -34,6 +34,15 @@ const MainBodyText = styled.div`
   opacity: 0.8;
 `;
 
+const MainBodySubText = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 2px;
+  opacity: 0.8;
+`;
+
 const CategoryBodyWrapper = styled.div`
   width: 350px;
   height: 100vh;
@@ -51,6 +60,15 @@ const MainPage = () => {
           <MainBodyText>
             <span style={{ fontSize: 88 }}>최재오</span>입니다.
           </MainBodyText>
+          <MainBodySubText>
+            프론트엔드 개발을 공부하고 있습니다.
+          </MainBodySubText>
+          <MainBodySubText>
+            공부하며 기록한 것들이 사람들에게 조금이나마 도움이 되었으면 합니다.
+          </MainBodySubText>
+          <MainBodySubText>
+            매일 조금씩 성장하는 개발자가 되기 위해서 노력하고 있습니다.
+          </MainBodySubText>
         </MainImageWrapper>
       </MainBodyWrapper>
     </>
