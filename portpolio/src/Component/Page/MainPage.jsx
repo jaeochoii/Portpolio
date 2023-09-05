@@ -47,13 +47,43 @@ const CategoryBodyWrapper = styled.div`
   width: 350px;
   height: 100vh;
   background-color: rgb(32, 34, 36);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+const CategoryContent = styled.div`
+  width: 170px;
+  height: 100px;
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 40px;
+  color: white;
 `;
 
 const MainPage = () => {
   return (
     <>
       <MainBodyWrapper>
-        <CategoryBodyWrapper />
+        <CategoryBodyWrapper>
+          <CategoryContent>Github</CategoryContent>
+          <CategoryContent>Velog</CategoryContent>
+          <CategoryContent>Project</CategoryContent>
+          <CategoryContent>Activies</CategoryContent>
+          <CategoryContent
+            style={{
+              fontSize: 18,
+              paddingTop: 70,
+              height: 30,
+            }}
+          >
+            chlwodh0716@gmail.com
+          </CategoryContent>
+          <CategoryContent style={{ fontSize: 18 }}>
+            @uh_jaeo_neul
+          </CategoryContent>
+        </CategoryBodyWrapper>
         <MainImageWrapper>
           <MainBodyImage src={mainImage}></MainBodyImage>
           <MainBodyText>어제보다 더 성장한 오늘을 꿈꾸는 개발자</MainBodyText>
