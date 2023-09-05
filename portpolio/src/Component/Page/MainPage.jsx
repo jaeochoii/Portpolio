@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import mainImage from "../../Assets/Image.png";
+import mainImage from "../../Assets/profile.jpg";
 const MainBodyWrapper = styled.div`
   display: flex;
   width: 100vw;
@@ -22,7 +22,8 @@ const MainBodyImage = styled.img`
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.5;
+  object-fit: cover;
 `;
 
 const MainBodyText = styled.div`
@@ -31,16 +32,16 @@ const MainBodyText = styled.div`
   font-size: 46px;
   color: white;
   margin-bottom: 20px;
-  opacity: 0.8;
+  opacity: 0.9999;
 `;
 
 const MainBodySubText = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
-  font-size: 26px;
+  font-size: 28px;
   color: white;
   margin-bottom: 2px;
-  opacity: 0.8;
+  opacity: 0.9999;
 `;
 
 const CategoryBodyWrapper = styled.div`
@@ -55,7 +56,7 @@ const CategoryBodyWrapper = styled.div`
 
 const CategoryContent = styled.div`
   width: 170px;
-  height: 100px;
+  height: 80px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
   font-size: 40px;
@@ -67,10 +68,18 @@ const MainPage = () => {
     <>
       <MainBodyWrapper>
         <CategoryBodyWrapper>
-          <CategoryContent>Github</CategoryContent>
-          <CategoryContent>Velog</CategoryContent>
-          <CategoryContent>Project</CategoryContent>
-          <CategoryContent>Activies</CategoryContent>
+          <CategoryContent>
+            Github<span style={{ color: "#0F7CA8" }}>.</span>
+          </CategoryContent>
+          <CategoryContent>
+            Velog<span style={{ color: "#0F7CA8" }}>.</span>
+          </CategoryContent>
+          <CategoryContent>
+            Project<span style={{ color: "#0F7CA8" }}>.</span>
+          </CategoryContent>
+          <CategoryContent>
+            Activies<span style={{ color: "#0F7CA8" }}>.</span>
+          </CategoryContent>
           <CategoryContent
             style={{
               fontSize: 18,
@@ -88,7 +97,15 @@ const MainPage = () => {
           <MainBodyImage src={mainImage}></MainBodyImage>
           <MainBodyText>어제보다 더 성장한 오늘을 꿈꾸는 개발자</MainBodyText>
           <MainBodyText>
-            <span style={{ fontSize: 88 }}>최재오</span>입니다.
+            <span
+              style={{
+                fontSize: 88,
+                boxShadow: "inset 0 -20px 0 #0F7CA8",
+              }}
+            >
+              최재오
+            </span>
+            입니다.
           </MainBodyText>
           <MainBodySubText>
             프론트엔드 개발을 공부하고 있습니다.
