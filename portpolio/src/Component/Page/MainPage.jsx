@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 import mainImage from "../../Assets/profile.jpg";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -47,6 +48,15 @@ const MainBodyText = styled.div`
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @keyframes run {
+    from {
+      width: 300px;
+    }
+    to {
+      width: 100%;
     }
   }
 `;
@@ -138,6 +148,12 @@ const MainPage = () => {
     window.open(urlVelog);
   };
 
+  const navigate = useNavigate();
+
+  const onClickActivies = () => {
+    navigate("/ActivePage");
+  };
+
   return (
     <>
       <MainBodyWrapper>
@@ -152,7 +168,7 @@ const MainPage = () => {
             Project
             <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
-          <CategoryContent>
+          <CategoryContent onClick={onClickActivies}>
             Activies<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategorySubContent
@@ -172,6 +188,10 @@ const MainPage = () => {
               style={{
                 fontSize: 88,
                 boxShadow: "inset 0 -20px 0 #0F7CA8",
+                animationName: "run",
+                animationDuration: "2s",
+                animationDelay: "1s",
+                animationFillMode: "forwards",
               }}
             >
               최재오
