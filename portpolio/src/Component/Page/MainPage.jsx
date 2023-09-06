@@ -37,6 +37,18 @@ const MainBodyText = styled.div`
   color: white;
   margin-bottom: 20px;
   opacity: 0.9999;
+  animation: fadeIna 2s;
+  @keyframes fadeIna {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const MainBodySubText = styled.div`
@@ -46,6 +58,18 @@ const MainBodySubText = styled.div`
   color: white;
   margin-bottom: 2px;
   opacity: 0.9999;
+  animation: fadeInb 3.5s;
+  @keyframes fadeInb {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const CategoryBodyWrapper = styled.div`
@@ -75,6 +99,15 @@ const CategoryContent = styled.button`
     box-shadow: inset 300px 0 0 0 #0f7ca8;
     cursor: pointer;
   }
+  animation: fadeIn 2s;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const CategorySubContent = styled.div`
@@ -85,6 +118,15 @@ const CategorySubContent = styled.div`
   font-size: 18px;
   color: white;
   margin-bottom: 10px;
+  animation: fadeIn 2s;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const MainPage = () => {
@@ -101,17 +143,17 @@ const MainPage = () => {
       <MainBodyWrapper>
         <CategoryBodyWrapper>
           <CategoryContent onClick={onClickGithub}>
-            Github<span style={{ color: "#0F7CA8" }}>.</span>
+            Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategoryContent onClick={onClickVelog}>
-            Velog<span style={{ color: "#0F7CA8" }}>.</span>
+            Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategoryContent>
             Project
-            <span style={{ color: "#0F7CA8" }}>.</span>
+            <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategoryContent>
-            Activies<span style={{ color: "#0F7CA8" }}>.</span>
+            Activies<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategorySubContent
             style={{
@@ -125,7 +167,7 @@ const MainPage = () => {
         <MainImageWrapper>
           <MainBodyImage src={mainImage}></MainBodyImage>
           <MainBodyText>어제보다 더 성장한 오늘을 꿈꾸는 개발자</MainBodyText>
-          <MainBodyText>
+          <MainBodyText style={{ animation: "fadeIna 3.5s" }}>
             <span
               style={{
                 fontSize: 88,
@@ -143,7 +185,7 @@ const MainPage = () => {
             공부하며 기록한 것들이 사람들에게 조금이나마 도움이 되었으면 합니다.
           </MainBodySubText>
           <MainBodySubText>
-            매일 조금씩 성장하는 개발자가 되기 위해서 노력하고 있습니다.
+            매일 조금씩 성장하는 개발자가 되기 위해서 늘 노력하고 있습니다.
           </MainBodySubText>
         </MainImageWrapper>
       </MainBodyWrapper>
