@@ -54,13 +54,33 @@ const CategoryBodyWrapper = styled.div`
   flex-direction: column;
 `;
 
-const CategoryContent = styled.div`
+const CategoryContent = styled.button`
   width: 170px;
-  height: 80px;
+  height: 50px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
   font-size: 40px;
+  background: none;
+  border: 0px solid;
   color: white;
+  text-align: left;
+  box-shadow: inset 0 0 0 0 #0f7ca8;
+  transition: ease-out 0.5s;
+  margin-bottom: 35px;
+  &:hover {
+    box-shadow: inset 300px 0 0 0 #0f7ca8;
+    cursor: pointer;
+  }
+`;
+
+const CategorySubContent = styled.div`
+  width: 170px;
+  height: 30px;
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
 `;
 
 const MainPage = () => {
@@ -75,23 +95,20 @@ const MainPage = () => {
             Velog<span style={{ color: "#0F7CA8" }}>.</span>
           </CategoryContent>
           <CategoryContent>
-            Project<span style={{ color: "#0F7CA8" }}>.</span>
+            Project
+            <span style={{ color: "#0F7CA8" }}>.</span>
           </CategoryContent>
           <CategoryContent>
             Activies<span style={{ color: "#0F7CA8" }}>.</span>
           </CategoryContent>
-          <CategoryContent
+          <CategorySubContent
             style={{
-              fontSize: 18,
-              paddingTop: 70,
-              height: 30,
+              paddingTop: 50,
             }}
           >
             chlwodh0716@gmail.com
-          </CategoryContent>
-          <CategoryContent style={{ fontSize: 18 }}>
-            @uh_jaeo_neul
-          </CategoryContent>
+          </CategorySubContent>
+          <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
         </CategoryBodyWrapper>
         <MainImageWrapper>
           <MainBodyImage src={mainImage}></MainBodyImage>
