@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import mainImage from "../../Assets/profile.jpg";
+
+const urlGithub = "https://github.com/jaeochoii";
+const urlVelog = "https://velog.io/@jaeochoiii";
+
 const MainBodyWrapper = styled.div`
   display: flex;
   width: 100vw;
@@ -84,14 +88,22 @@ const CategorySubContent = styled.div`
 `;
 
 const MainPage = () => {
+  const onClickGithub = () => {
+    window.open(urlGithub);
+  };
+
+  const onClickVelog = () => {
+    window.open(urlVelog);
+  };
+
   return (
     <>
       <MainBodyWrapper>
         <CategoryBodyWrapper>
-          <CategoryContent>
+          <CategoryContent onClick={onClickGithub}>
             Github<span style={{ color: "#0F7CA8" }}>.</span>
           </CategoryContent>
-          <CategoryContent>
+          <CategoryContent onClick={onClickVelog}>
             Velog<span style={{ color: "#0F7CA8" }}>.</span>
           </CategoryContent>
           <CategoryContent>
