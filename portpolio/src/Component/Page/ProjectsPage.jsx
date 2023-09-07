@@ -30,7 +30,7 @@ const MainImageWrapper = styled.div`
 `;
 
 const MainTitleText = styled.div`
-  width: 200px;
+  width: 400px;
   height: 70px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
@@ -42,29 +42,29 @@ const MainTitleText = styled.div`
 `;
 
 const MainHeadText = styled.div`
-  width: 500px;
+  width: 400px;
   height: 50px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
   font-size: 35px;
   color: black;
-  padding-top: 30px;
+  padding-top: 25px;
   margin-left: 30px;
 `;
 
 const MainSubText = styled.div`
-  width: 500px;
-  height: 40px;
+  width: 850px;
+  height: 23px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
   font-size: 25px;
   color: black;
-  padding-top: 5px;
+  margin-bottom: 10px;
   margin-left: 55px;
 `;
 
 const CategoryBodyWrapper = styled.div`
-  width: 285px;
+  width: 350px;
   height: 100vh;
   background-color: rgb(32, 34, 36);
   justify-content: center;
@@ -162,27 +162,44 @@ const ProjectsPage = () => {
         </CategoryBodyWrapper>
         <MainImageWrapper>
           <MainTitleText>
-            Activies<span style={{ color: "#0F7CA8" }}>.</span>
+            Projects<span style={{ color: "#0F7CA8" }}>.</span>
           </MainTitleText>
-          <MainHeadText>• 인하대학교</MainHeadText>
-          <MainSubText>&nbsp;&nbsp;컴퓨터공학과 4학년 재학</MainSubText>
-          <MainHeadText>• 인하대학교 위드아이 멘토링</MainHeadText>
+          <MainHeadText>• Assemble 🥈</MainHeadText>
+          <MainSubText>&nbsp;&nbsp;- 인하대학교 해커톤 2위 수상</MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;인천광역시 1기 컴퓨터공학과 멘토
+            &nbsp;&nbsp;- 구글시트와 깃허브에서 영감을 받아 팀플 과제를 할 때
+            수정된 내용과 수정자를 쉽게 확인할 수
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;있게 해주고, 모두가 가능한 날짜로 팀플
+            약속을 잡게 도와주는 협업 플랫폼을 제작하였습니다.{" "}
+          </MainSubText>
+          <MainSubText />
+          <MainSubText>
+            &nbsp;&nbsp;- 활용기술: 자바스크립트, 리액트
+          </MainSubText>
+          <MainHeadText>• Dukku(덕꾸) 🥈</MainHeadText>
+          <MainSubText>
+            &nbsp;&nbsp;- 멋쟁이 사자처럼 중앙 해커톤 은상 수상
           </MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;인천광역시 2기 컴퓨터공학과 멘토
+            &nbsp;&nbsp;- 소비자가 필요로 하는 구성품만을 제공하는 앨범인 토큰형
+            앨범을 제작하고, 이 토큰형 앨범 &nbsp;&nbsp;&nbsp;&nbsp; 에 대한
+            구매 내역을 기록하여 환경도 보존하는 온라인 앨범보관 플랫폼을
+            제작하였습니다.{" "}
           </MainSubText>
-          <MainHeadText>• 멋쟁이 사자처럼</MainHeadText>
-          <MainSubText>&nbsp;&nbsp;멋쟁이 사자처럼 10기 인하대학교</MainSubText>
+          <MainSubText />
           <MainSubText>
-            &nbsp;&nbsp;멋쟁이 사자처럼 11기 인하대학교 운영진
+            &nbsp;&nbsp;- 활용기술: 자바스크립트, 리액트, 피그마
           </MainSubText>
+          <MainHeadText>• Ecord</MainHeadText>
           <MainSubText>
-            &nbsp;&nbsp;멋쟁이 사자처럼 11기 중앙 운영진
+            &nbsp;&nbsp;- 종이 영수증 발급으로 발생하는 환경오염을 줄이고자
+            NFT와 연결하여 전자 영수증을 온라인으 &nbsp;&nbsp;&nbsp;&nbsp; 로
+            발급받을 수 있고, 영수증을 꾸며서 보관할 수 있는 프로그램을
+            제작하였습니다.{" "}
           </MainSubText>
+          <MainSubText />
           <MainSubText>
-            &nbsp;&nbsp;자바스크립트 기본, 심화 세션 진행
+            &nbsp;&nbsp;- 활용기술: 자바스크립트, 리액트, 피그마
           </MainSubText>
         </MainImageWrapper>
       </MainBodyWrapper>

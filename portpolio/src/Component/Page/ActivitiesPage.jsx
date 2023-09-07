@@ -42,7 +42,7 @@ const MainTitleText = styled.div`
 `;
 
 const MainHeadText = styled.div`
-  width: 500px;
+  width: 400px;
   height: 50px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
@@ -53,7 +53,7 @@ const MainHeadText = styled.div`
 `;
 
 const MainSubText = styled.div`
-  width: 500px;
+  width: 400px;
   height: 40px;
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
@@ -64,7 +64,7 @@ const MainSubText = styled.div`
 `;
 
 const CategoryBodyWrapper = styled.div`
-  width: 285px;
+  width: 350px;
   height: 100vh;
   background-color: rgb(32, 34, 36);
   justify-content: center;
@@ -164,24 +164,26 @@ const ActivitiesPage = () => {
             Activies<span style={{ color: "#0F7CA8" }}>.</span>
           </MainTitleText>
           <MainHeadText>• 인하대학교</MainHeadText>
-          <MainSubText>&nbsp;&nbsp;컴퓨터공학과 4학년 재학</MainSubText>
+          <MainSubText>&nbsp;&nbsp;- 컴퓨터공학과 4학년 재학</MainSubText>
           <MainHeadText>• 인하대학교 위드아이 멘토링</MainHeadText>
           <MainSubText>
-            &nbsp;&nbsp;인천광역시 1기 컴퓨터공학과 멘토
+            &nbsp;&nbsp;- 인천광역시 1기 컴퓨터공학과 멘토
           </MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;인천광역시 2기 컴퓨터공학과 멘토
+            &nbsp;&nbsp;- 인천광역시 2기 컴퓨터공학과 멘토
           </MainSubText>
           <MainHeadText>• 멋쟁이 사자처럼</MainHeadText>
-          <MainSubText>&nbsp;&nbsp;멋쟁이 사자처럼 10기 인하대학교</MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;멋쟁이 사자처럼 11기 인하대학교 운영진
+            &nbsp;&nbsp;- 멋쟁이 사자처럼 10기 인하대학교
           </MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;멋쟁이 사자처럼 11기 중앙 운영진
+            &nbsp;&nbsp;- 멋쟁이 사자처럼 11기 인하대학교 운영진
           </MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;자바스크립트 기본, 심화 세션 진행
+            &nbsp;&nbsp;- 멋쟁이 사자처럼 11기 중앙 운영진
+          </MainSubText>
+          <MainSubText>
+            &nbsp;&nbsp;- 자바스크립트 기본, 심화 세션 진행
           </MainSubText>
         </MainImageWrapper>
       </MainBodyWrapper>
