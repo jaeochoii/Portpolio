@@ -112,6 +112,10 @@ const ActivitiesPage = () => {
     window.open(urlVelog);
   };
 
+  const onClickHome = () => {
+    navigate("/");
+  };
+
   const onClickProjects = () => {
     navigate("/ProjectPage");
   };
@@ -119,6 +123,9 @@ const ActivitiesPage = () => {
     <>
       <MainBodyWrapper>
         <CategoryBodyWrapper>
+          <CategoryContent onClick={onClickHome}>
+            Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+          </CategoryContent>
           <CategoryContent onClick={onClickGithub}>
             Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>

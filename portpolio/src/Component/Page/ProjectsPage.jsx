@@ -116,10 +116,17 @@ const ProjectsPage = () => {
   const onClickActivies = () => {
     navigate("/ActivePage");
   };
+
+  const onClickHome = () => {
+    navigate("/");
+  };
   return (
     <>
       <MainBodyWrapper>
         <CategoryBodyWrapper>
+          <CategoryContent onClick={onClickHome}>
+            Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+          </CategoryContent>
           <CategoryContent onClick={onClickGithub}>
             Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>

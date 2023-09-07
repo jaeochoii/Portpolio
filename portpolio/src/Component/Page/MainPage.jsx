@@ -154,6 +154,9 @@ const MainPage = () => {
       <MainBodyWrapper>
         <CategoryBodyWrapper>
           <CategoryContent onClick={onClickGithub}>
+            Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+          </CategoryContent>
+          <CategoryContent onClick={onClickGithub}>
             Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategoryContent onClick={onClickVelog}>
