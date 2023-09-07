@@ -50,15 +50,6 @@ const MainBodyText = styled.div`
       opacity: 1;
     }
   }
-
-  @keyframes run {
-    from {
-      width: 300px;
-    }
-    to {
-      width: 100%;
-    }
-  }
 `;
 
 const MainBodySubText = styled.div`
