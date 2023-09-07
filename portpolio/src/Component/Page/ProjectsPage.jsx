@@ -120,8 +120,9 @@ const CategorySubContent = styled.div`
   }
 `;
 
-const ActivitiesPage = () => {
+const ProjectsPage = () => {
   const navigate = useNavigate();
+
   const onClickGithub = () => {
     window.open(urlGithub);
   };
@@ -130,8 +131,8 @@ const ActivitiesPage = () => {
     window.open(urlVelog);
   };
 
-  const onClickProjects = () => {
-    navigate("/ProjectPage");
+  const onClickActivies = () => {
+    navigate("/ActivePage");
   };
   return (
     <>
@@ -143,11 +144,11 @@ const ActivitiesPage = () => {
           <CategoryContent onClick={onClickVelog}>
             Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
-          <CategoryContent onClick={onClickProjects}>
+          <CategoryContent>
             Project
             <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
-          <CategoryContent>
+          <CategoryContent onClick={onClickActivies}>
             Activies<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
           <CategorySubContent
@@ -189,4 +190,4 @@ const ActivitiesPage = () => {
   );
 };
 
-export default ActivitiesPage;
+export default ProjectsPage;

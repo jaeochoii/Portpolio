@@ -145,6 +145,10 @@ const MainPage = () => {
     navigate("/ActivePage");
   };
 
+  const onClickProjects = () => {
+    navigate("/ProjectPage");
+  };
+
   return (
     <>
       <MainBodyWrapper>
@@ -155,7 +159,7 @@ const MainPage = () => {
           <CategoryContent onClick={onClickVelog}>
             Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
-          <CategoryContent>
+          <CategoryContent onClick={onClickProjects}>
             Project
             <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
           </CategoryContent>
