@@ -90,15 +90,6 @@ const CategoryContent = styled.button`
     box-shadow: inset 300px 0 0 0 #0f7ca8;
     cursor: pointer;
   }
-  animation: fadeIn 2s;
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 `;
 
 const CategorySubContent = styled.div`
@@ -109,15 +100,6 @@ const CategorySubContent = styled.div`
   font-size: 18px;
   color: white;
   margin-bottom: 10px;
-  animation: fadeIn 2s;
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 `;
 
 const ActivitiesPage = () => {
