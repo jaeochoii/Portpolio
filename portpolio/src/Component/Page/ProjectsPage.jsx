@@ -120,6 +120,7 @@ const ProjectsPage = () => {
   const onClickHome = () => {
     navigate("/");
   };
+
   return (
     <>
       <MainBodyWrapper>
@@ -151,7 +152,7 @@ const ProjectsPage = () => {
         </CategoryBodyWrapper>
         <MainImageWrapper>
           <MainTitleText>
-            Projects<span style={{ color: "#0F7CA8" }}>.</span>
+            Project<span style={{ color: "#0F7CA8" }}>.</span>
           </MainTitleText>
           <MainHeadText>• Assemble 🥈</MainHeadText>
           <MainSubText>&nbsp;&nbsp;- 인하대학교 해커톤 2위 수상</MainSubText>
