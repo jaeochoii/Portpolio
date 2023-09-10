@@ -64,7 +64,7 @@ const MainSubText = styled.div`
 `;
 
 const CategoryBodyWrapper = styled.div`
-  width: 350px;
+  width: 355px;
   height: 100vh;
   background-color: rgb(32, 34, 36);
   justify-content: center;
