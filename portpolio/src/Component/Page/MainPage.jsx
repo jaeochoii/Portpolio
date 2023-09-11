@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import mainImage from "../../Assets/profile.jpg";
+import blogImage from "../../Assets/blog.png";
+import arrow from "../../Assets/arrow.png";
 import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -32,12 +34,41 @@ const MainBodyImage = styled.img`
   object-fit: cover;
 `;
 
+const MainBodyImage2 = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+`;
+
 const MainBodyText = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
   font-size: 46px;
   color: white;
   margin-bottom: 20px;
+  opacity: 0.9999;
+  animation: fadeIna 2s;
+  @keyframes fadeIna {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+const MainBlogText = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  height: 80px;
+  font-size: 45px;
+  margin-left: 20px;
   opacity: 0.9999;
   animation: fadeIna 2s;
   @keyframes fadeIna {
@@ -74,6 +105,13 @@ const MainBodySubText = styled.div`
   }
 `;
 
+const ArrowWrapper = styled.img`
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+`;
+
 const CategoryBodyWrapper = styled.div`
   width: 350px;
   height: 100vh;
@@ -82,6 +120,28 @@ const CategoryBodyWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+`;
+
+const LinkButton = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #20c997;
+  opacity: 0.9999;
+  color: white;
+  font-size: 20px;
+  &:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: black;
+    background-color: #20c997;
+  }
 `;
 
 const CategoryContent = styled.button`
@@ -132,6 +192,10 @@ const CategorySubContent = styled.div`
 `;
 
 const MainPage = () => {
+  const onClickHome = () => {
+    navigate("/");
+  };
+
   const onClickGithub = () => {
     window.open(urlGithub);
   };
@@ -151,7 +215,13 @@ const MainPage = () => {
   };
 
   let options = {
-    anchors: ["sectionOne", "sectionTwo"],
+    anchors: [
+      "sectionOne",
+      "sectionTwo",
+      "sectionThree",
+      "sectionFour",
+      "sectionFive",
+    ],
   };
 
   return (
@@ -160,11 +230,12 @@ const MainPage = () => {
         <Section>
           <MainBodyWrapper>
             <CategoryBodyWrapper>
-              <CategoryContent>
+              <CategoryContent onClick={onClickHome}>
                 Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
               </CategoryContent>
               <CategoryContent onClick={onClickGithub}>
-                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                Github
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
               </CategoryContent>
               <CategoryContent onClick={onClickVelog}>
                 Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
@@ -217,6 +288,165 @@ const MainPage = () => {
                 매일 조금씩 성장하는 개발자가 되기 위해서 늘 노력하고 있습니다.
               </MainBodySubText>
             </MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper style={{ backgroundColor: "white" }}>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickVelog}>
+                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickProjects}>
+                Project
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickActivies}>
+                Activies
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper>
+              <MainBodyImage2 src={blogImage} />
+              <MainBlogText>
+                배운 내용을
+                <span
+                  style={{ fontSize: 80, boxShadow: "inset 0 -10px 0 #0F7CA8" }}
+                >
+                  기록
+                </span>
+                &nbsp;하고
+              </MainBlogText>
+              <MainBlogText>
+                <span
+                  style={{ fontSize: 80, boxShadow: "inset 0 -10px 0 #0F7CA8" }}
+                >
+                  공유
+                </span>
+                &nbsp;하는 것을 즐겨하는,
+              </MainBlogText>
+              <MainBlogText>
+                <span
+                  style={{ fontSize: 80, boxShadow: "inset 0 -10px 0 #0F7CA8" }}
+                >
+                  소통
+                </span>
+                &nbsp;하는 개발자
+              </MainBlogText>
+              <ArrowWrapper src={arrow}></ArrowWrapper>
+              <LinkButton onClick={onClickVelog}>
+                블로그 글 구경하러 가기
+              </LinkButton>
+            </MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickVelog}>
+                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickProjects}>
+                Project
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickActivies}>
+                Activies
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper></MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickVelog}>
+                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickProjects}>
+                Project
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickActivies}>
+                Activies
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper></MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickVelog}>
+                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickProjects}>
+                Project
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent onClick={onClickActivies}>
+                Activies
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper></MainImageWrapper>
           </MainBodyWrapper>
         </Section>
       </SectionsContainer>
