@@ -70,13 +70,13 @@ const MainBlogText = styled.div`
   font-size: 45px;
   margin-left: 20px;
   opacity: 0.9999;
-  animation: fadeIna 2s;
-  @keyframes fadeIna {
+  animation: fadeInv 9s;
+  @keyframes fadeInv {
     0% {
       opacity: 0;
     }
     50% {
-      opacity: 0;
+      opacity: 1;
     }
     100% {
       opacity: 1;
@@ -91,8 +91,8 @@ const MainBodySubText = styled.div`
   color: white;
   margin-bottom: 2px;
   opacity: 0.9999;
-  animation: fadeInb 3.5s;
-  @keyframes fadeInb {
+  animation: fadeIna 3.5s;
+  @keyframes fadeIna {
     0% {
       opacity: 0;
     }
@@ -110,6 +110,19 @@ const ArrowWrapper = styled.img`
   height: 50px;
   margin-top: 20px;
   margin-bottom: 15px;
+  opacity: 0.9999;
+  animation: fadeInp 11s;
+  @keyframes fadeInp {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const CategoryBodyWrapper = styled.div`
@@ -141,6 +154,18 @@ const LinkButton = styled.div`
     transition: all 0.5s ease;
     color: black;
     background-color: #20c997;
+  }
+  animation: fadeIni 12s;
+  @keyframes fadeIni {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
@@ -321,7 +346,7 @@ const MainPage = () => {
             </CategoryBodyWrapper>
             <MainImageWrapper>
               <MainBodyImage2 src={blogImage} />
-              <MainBlogText>
+              <MainBlogText style={{ animation: "fadeIna 8s" }}>
                 배운 내용을
                 <span
                   style={{ fontSize: 80, boxShadow: "inset 0 -10px 0 #0F7CA8" }}
@@ -330,7 +355,7 @@ const MainPage = () => {
                 </span>
                 &nbsp;하고
               </MainBlogText>
-              <MainBlogText>
+              <MainBlogText style={{ animation: "fadeIna 9s" }}>
                 <span
                   style={{ fontSize: 80, boxShadow: "inset 0 -10px 0 #0F7CA8" }}
                 >
@@ -338,7 +363,7 @@ const MainPage = () => {
                 </span>
                 &nbsp;하는 것을 즐겨하는,
               </MainBlogText>
-              <MainBlogText>
+              <MainBlogText style={{ animation: "fadeIna 10s" }}>
                 <span
                   style={{ fontSize: 80, boxShadow: "inset 0 -10px 0 #0F7CA8" }}
                 >
