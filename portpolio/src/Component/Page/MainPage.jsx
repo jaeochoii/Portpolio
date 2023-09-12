@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import mainImage from "../../Assets/profile.jpg";
 import blogImage from "../../Assets/blog.png";
 import arrow from "../../Assets/arrow.png";
+import mentorImage from "../../Assets/mentorImage.png";
 import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -155,12 +156,15 @@ const LinkButton = styled.div`
     color: black;
     background-color: #20c997;
   }
-  animation: fadeIni 12s;
+  animation: fadeIni 10s;
   @keyframes fadeIni {
     0% {
       opacity: 0;
     }
     50% {
+      opacity: 0;
+    }
+    70% {
       opacity: 0;
     }
     100% {
@@ -214,6 +218,46 @@ const CategorySubContent = styled.div`
       opacity: 1;
     }
   }
+`;
+
+const ImageWrapper = styled.div`
+  width: 1050px;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  margin-top: 20px;
+`;
+
+const ActiveWrapper = styled.img`
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 10px;
+`;
+
+const ActiveTextWrapper = styled.div`
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #16161c;
+`;
+
+const TeachText = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 25px;
+  font-weight: 200;
+  color: white;
+  opacity: 0.5;
+  line-height: 1.5;
 `;
 
 const MainPage = () => {
@@ -379,7 +423,7 @@ const MainPage = () => {
           </MainBodyWrapper>
         </Section>
         <Section>
-          <MainBodyWrapper>
+          <MainBodyWrapper style={{ backgroundColor: "#16161c" }}>
             <CategoryBodyWrapper>
               <CategoryContent>
                 Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
@@ -407,7 +451,26 @@ const MainPage = () => {
               </CategorySubContent>
               <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
             </CategoryBodyWrapper>
-            <MainImageWrapper></MainImageWrapper>
+            <MainImageWrapper>
+              <MainBodyText style={{ fontSize: 60 }}>
+                내가 해왔던 활동
+              </MainBodyText>
+              <ImageWrapper>
+                <ActiveWrapper src={mentorImage}></ActiveWrapper>
+                <ActiveTextWrapper>
+                  <TeachText>
+                    개발자, 혹은 컴퓨터공학과 진학을 꿈꾸는 많은 학생들에게 학과
+                    소개 및 다양한 실습활동을 통해 진로 선택하는 과정에서 도움이
+                    되고자 노력하였습니다. Deep한 내용보다는 흥미를 유발하는
+                    수업으로 학생들의 흥미를 유발하고자 하였습니다.
+                  </TeachText>
+                </ActiveTextWrapper>
+              </ImageWrapper>
+              <ImageWrapper>
+                <ActiveWrapper src={mentorImage}></ActiveWrapper>
+                <ActiveTextWrapper></ActiveTextWrapper>
+              </ImageWrapper>
+            </MainImageWrapper>
           </MainBodyWrapper>
         </Section>
         <Section>
