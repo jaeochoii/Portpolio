@@ -290,13 +290,7 @@ const MainPage = () => {
   };
 
   let options = {
-    anchors: [
-      "sectionOne",
-      "sectionTwo",
-      "sectionThree",
-      "sectionFour",
-      "sectionFive",
-    ],
+    anchors: ["sectionOne", "sectionTwo", "sectionThree", "sectionFour"],
   };
 
   return (
@@ -569,38 +563,6 @@ const MainPage = () => {
                 </ActiveTextWrapper>
               </ImageWrapper>
             </MainImageWrapper>
-          </MainBodyWrapper>
-        </Section>
-        <Section>
-          <MainBodyWrapper>
-            <CategoryBodyWrapper>
-              <CategoryContent>
-                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickGithub}>
-                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickVelog}>
-                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickProjects}>
-                Project
-                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickActivies}>
-                Activies
-                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategorySubContent
-                style={{
-                  paddingTop: 50,
-                }}
-              >
-                chlwodh0716@gmail.com
-              </CategorySubContent>
-              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
-            </CategoryBodyWrapper>
-            <MainImageWrapper></MainImageWrapper>
           </MainBodyWrapper>
         </Section>
       </SectionsContainer>
