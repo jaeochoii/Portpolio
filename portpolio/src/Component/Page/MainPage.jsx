@@ -5,6 +5,7 @@ import mainImage from "../../Assets/profile.jpg";
 import blogImage from "../../Assets/blog.png";
 import arrow from "../../Assets/arrow.png";
 import mentorImage from "../../Assets/mentorImage.png";
+import sessionImage from "../../Assets/sessionImage.png";
 import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -254,7 +255,6 @@ const TeachText = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
   font-family: "Do Hyeon", sans-serif;
   font-size: 25px;
-  font-weight: 200;
   color: white;
   opacity: 0.5;
   line-height: 1.5;
@@ -460,15 +460,23 @@ const MainPage = () => {
                 <ActiveTextWrapper>
                   <TeachText>
                     개발자, 혹은 컴퓨터공학과 진학을 꿈꾸는 많은 학생들에게 학과
-                    소개 및 다양한 실습활동을 통해 진로 선택하는 과정에서 도움이
-                    되고자 노력하였습니다. Deep한 내용보다는 흥미를 유발하는
-                    수업으로 학생들의 흥미를 유발하고자 하였습니다.
+                    소개 및 다양한 실습활동을 통해 진로를 선택하는 과정에서
+                    도움이 되고자 노력하였습니다. Deep한 내용보다는 흥미를
+                    유발하는 수업으로 학생들의 흥미를 유발하고자 하였습니다.
                   </TeachText>
                 </ActiveTextWrapper>
               </ImageWrapper>
               <ImageWrapper>
-                <ActiveWrapper src={mentorImage}></ActiveWrapper>
-                <ActiveTextWrapper></ActiveTextWrapper>
+                <ActiveWrapper src={sessionImage}></ActiveWrapper>
+                <ActiveTextWrapper>
+                  <TeachText>
+                    프론트 엔드 개발자가 되기 위해서는 자바스크립트를 필수적으로
+                    알아야 합니다. 반복문, 조건문과 같은 기본적인 내용부터
+                    함수와 객체같은 심화적인 내용까지 이론과 실습 강의를
+                    진행하였습니다. 기본이 중요한만큼 책임감을 갖고 세션을
+                    진행하여 노력하였습니다.
+                  </TeachText>
+                </ActiveTextWrapper>
               </ImageWrapper>
             </MainImageWrapper>
           </MainBodyWrapper>
