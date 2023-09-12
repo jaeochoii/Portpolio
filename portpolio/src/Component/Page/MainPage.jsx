@@ -13,6 +13,10 @@ import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
 const urlVelog = "https://velog.io/@jaeochoiii";
+const urlAssemble = "https://github.com/Likelion-Inha-10/Assemble-Front";
+const urlDukku = "https://github.com/Likelion-Inha-10/Duckku-fe";
+const urlEcord =
+  "https://github.com/Ecord-2023-super-challenge-hackathon/ecord-frontend";
 
 const MainBodyWrapper = styled.div`
   display: flex;
@@ -279,6 +283,18 @@ const MainPage = () => {
     window.open(urlVelog);
   };
 
+  const onClickAssemble = () => {
+    window.open(urlAssemble);
+  };
+
+  const onClickDukku = () => {
+    window.open(urlDukku);
+  };
+
+  const onClickEcord = () => {
+    window.open(urlEcord);
+  };
+
   const navigate = useNavigate();
 
   const onClickActivies = () => {
@@ -453,7 +469,7 @@ const MainPage = () => {
             </CategoryBodyWrapper>
             <MainImageWrapper>
               <MainBodyText style={{ fontSize: 60 }}>
-                내가 해왔던 활동
+                그간 해왔던 활동
               </MainBodyText>
               <ImageWrapper>
                 <ActiveWrapper src={mentorImage}></ActiveWrapper>
@@ -515,6 +531,7 @@ const MainPage = () => {
                 <ActiveWrapper
                   src={assemble}
                   style={{ height: 200 }}
+                  onClick={onClickAssemble}
                 ></ActiveWrapper>
                 <ActiveTextWrapper style={{ height: 200 }}>
                   <TeachText>
@@ -532,6 +549,7 @@ const MainPage = () => {
                 <ActiveWrapper
                   src={dukku}
                   style={{ height: 200 }}
+                  onClick={onClickDukku}
                 ></ActiveWrapper>
                 <ActiveTextWrapper style={{ height: 200 }}>
                   <TeachText>
@@ -549,6 +567,7 @@ const MainPage = () => {
                 <ActiveWrapper
                   src={ecord}
                   style={{ height: 200 }}
+                  onClick={onClickEcord}
                 ></ActiveWrapper>
                 <ActiveTextWrapper style={{ height: 200 }}>
                   <TeachText>
