@@ -6,6 +6,9 @@ import blogImage from "../../Assets/blog.png";
 import arrow from "../../Assets/arrow.png";
 import mentorImage from "../../Assets/mentorImage.png";
 import sessionImage from "../../Assets/sessionImage.png";
+import assemble from "../../Assets/assemble.png";
+import dukku from "../../Assets/dukku.png";
+import ecord from "../../Assets/ecord.png";
 import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -238,6 +241,10 @@ const ActiveWrapper = styled.img`
   align-items: center;
   object-fit: cover;
   border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
 `;
 
 const ActiveTextWrapper = styled.div`
@@ -256,7 +263,6 @@ const TeachText = styled.div`
   font-family: "Do Hyeon", sans-serif;
   font-size: 25px;
   color: white;
-  opacity: 0.5;
   line-height: 1.5;
 `;
 
@@ -461,8 +467,8 @@ const MainPage = () => {
                   <TeachText>
                     개발자, 혹은 컴퓨터공학과 진학을 꿈꾸는 많은 학생들에게 학과
                     소개 및 다양한 실습활동을 통해 진로를 선택하는 과정에서
-                    도움이 되고자 노력하였습니다. Deep한 내용보다는 흥미를
-                    유발하는 수업으로 학생들의 흥미를 유발하고자 하였습니다.
+                    도움이 되고자 노력하였습니다. Deep한 내용보다는 눈높이에
+                    맞는 수업으로 학생들의 흥미를 유발하고자 하였습니다.
                   </TeachText>
                 </ActiveTextWrapper>
               </ImageWrapper>
@@ -510,7 +516,59 @@ const MainPage = () => {
               </CategorySubContent>
               <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
             </CategoryBodyWrapper>
-            <MainImageWrapper></MainImageWrapper>
+            <MainImageWrapper>
+              <ImageWrapper style={{ height: 250 }}>
+                <ActiveWrapper
+                  src={assemble}
+                  style={{ height: 200 }}
+                ></ActiveWrapper>
+                <ActiveTextWrapper style={{ height: 200 }}>
+                  <TeachText>
+                    구글시트와 깃허브에서 영감을 받아 팀플 과제를 할 때 수정된
+                    내용과 수정자를 쉽게 확인할 수 있게 해주고, 모두가 가능한
+                    날짜로 팀플 약속을 잡게 도와주는{" "}
+                    <span style={{ boxShadow: "inset 106px 0 0 0 #0F7CA8" }}>
+                      협업 플랫폼
+                    </span>
+                    을 제작하였습니다.
+                  </TeachText>
+                </ActiveTextWrapper>
+              </ImageWrapper>
+              <ImageWrapper style={{ height: 250 }}>
+                <ActiveWrapper
+                  src={dukku}
+                  style={{ height: 200 }}
+                ></ActiveWrapper>
+                <ActiveTextWrapper style={{ height: 200 }}>
+                  <TeachText>
+                    소비자가 필요로 하는 구성품만을 제공하는 앨범인 토큰형
+                    앨범을 제작하고, 이 토큰형 앨범에 대한 구매 내역을 기록하여
+                    환경도 보존하는{" "}
+                    <span style={{ boxShadow: "inset 206px 0 0 0 #0F7CA8" }}>
+                      온라인 앨범보관 플랫폼
+                    </span>
+                    을 제작하였습니다.
+                  </TeachText>
+                </ActiveTextWrapper>
+              </ImageWrapper>
+              <ImageWrapper style={{ height: 250 }}>
+                <ActiveWrapper
+                  src={ecord}
+                  style={{ height: 200 }}
+                ></ActiveWrapper>
+                <ActiveTextWrapper style={{ height: 200 }}>
+                  <TeachText>
+                    종이 영수증 발급으로 발생하는 환경오염을 줄이고자 NFT와
+                    연결하여{" "}
+                    <span style={{ boxShadow: "inset 106px 0 0 0 #0F7CA8" }}>
+                      전자 영수증
+                    </span>
+                    을 온라인으로 발급받을 수 있고, 영수증을 꾸며서 보관할 수
+                    있는 프로그램을 제작하였습니다.
+                  </TeachText>
+                </ActiveTextWrapper>
+              </ImageWrapper>
+            </MainImageWrapper>
           </MainBodyWrapper>
         </Section>
         <Section>
