@@ -17,6 +17,8 @@ const urlAssemble = "https://github.com/Likelion-Inha-10/Assemble-Front";
 const urlDukku = "https://github.com/Likelion-Inha-10/Duckku-fe";
 const urlEcord =
   "https://github.com/Ecord-2023-super-challenge-hackathon/ecord-frontend";
+const urlMentor =
+  "https://velog.io/@jaeochoiii/%EB%81%84%EC%A0%81%EB%81%84%EC%A0%81-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99%EA%B3%BC-%EB%A9%98%ED%86%A0%EB%A7%81-%ED%9B%84%EA%B8%B0";
 
 const MainBodyWrapper = styled.div`
   display: flex;
@@ -295,6 +297,10 @@ const MainPage = () => {
     window.open(urlEcord);
   };
 
+  const onClickMentor = () => {
+    window.open(urlMentor);
+  };
+
   const navigate = useNavigate();
 
   const onClickActivies = () => {
@@ -472,7 +478,10 @@ const MainPage = () => {
                 그간 해왔던 활동
               </MainBodyText>
               <ImageWrapper>
-                <ActiveWrapper src={mentorImage}></ActiveWrapper>
+                <ActiveWrapper
+                  src={mentorImage}
+                  onClick={onClickMentor}
+                ></ActiveWrapper>
                 <ActiveTextWrapper>
                   <TeachText>
                     개발자, 혹은 컴퓨터공학과 진학을 꿈꾸는 많은 학생들에게 학과
