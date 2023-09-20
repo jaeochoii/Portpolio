@@ -6,21 +6,12 @@ import SimpleSlider from "./Component/Page/SimpleSlider";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path={process.env.PUBLIC_URL + "/"} element={<MainPage />} />
-        <Route
-          path={process.env.PUBLIC_URL + "ActivePage"}
-          element={<ActivitiesPage />}
-        />
-        <Route
-          path={process.env.PUBLIC_URL + "ProjectPage"}
-          element={<ProjectsPage />}
-        />
-        <Route
-          path={process.env.PUBLIC_URL + "SimplePage"}
-          element={<SimpleSlider />}
-        />
+        <Route path="/" element={<MainPage />} />
+        <Route path="ActivePage" element={<ActivitiesPage />} />
+        <Route path="ProjectPage" element={<ProjectsPage />} />
+        <Route path="SimplePage" element={<SimpleSlider />} />
       </Routes>
     </BrowserRouter>
   );
