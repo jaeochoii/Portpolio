@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portpolio/static/css/main.1c0e51a8.css",
+    "main.js": "/Portpolio/static/js/main.ecf87f8a.js",
+    "static/js/988.836c5981.chunk.js": "/Portpolio/static/js/988.836c5981.chunk.js",
+    "static/media/sessionImage.png": "/Portpolio/static/media/sessionImage.7e06c7194df68f01fef2.png",
+    "static/media/mentorImage.png": "/Portpolio/static/media/mentorImage.7aeedc3d090f14118c56.png",
+    "static/media/profile.jpg": "/Portpolio/static/media/profile.f4fbfd40883218b29885.jpg",
+    "static/media/blog.png": "/Portpolio/static/media/blog.01e449f4315f7e8c3099.png",
+    "static/media/dukku.png": "/Portpolio/static/media/dukku.4ade842fbc64c007a15f.png",
+    "static/media/assemble.png": "/Portpolio/static/media/assemble.be72ea29475e5e5aa4ac.png",
+    "static/media/ecord.png": "/Portpolio/static/media/ecord.a6b9e66d9c3dad9ccd84.png",
+    "index.html": "/Portpolio/index.html",
+    "main.1c0e51a8.css.map": "/Portpolio/static/css/main.1c0e51a8.css.map",
+    "main.ecf87f8a.js.map": "/Portpolio/static/js/main.ecf87f8a.js.map",
+    "988.836c5981.chunk.js.map": "/Portpolio/static/js/988.836c5981.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c0e51a8.css",
+    "static/js/main.ecf87f8a.js"
+  ]
+}
