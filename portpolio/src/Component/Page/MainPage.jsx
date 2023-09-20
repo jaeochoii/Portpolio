@@ -475,7 +475,7 @@ const MainPage = () => {
             </CategoryBodyWrapper>
             <MainImageWrapper>
               <MainBodyText style={{ fontSize: 60 }}>
-                그간 해왔던 활동
+                그동안 해왔던 활동
               </MainBodyText>
               <ImageWrapper>
                 <ActiveWrapper

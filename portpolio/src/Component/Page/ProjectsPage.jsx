@@ -61,6 +61,7 @@ const MainSubText = styled.div`
   color: black;
   margin-bottom: 10px;
   margin-left: 55px;
+  white-space: pre-line;
 `;
 
 const CategoryBodyWrapper = styled.div`
@@ -121,6 +122,9 @@ const ProjectsPage = () => {
     navigate("/");
   };
 
+  const str1 = `구글시트와 깃허브에서 영감을 받아 팀플 과제를 할 때 수정된 내용과 수정자를 쉽게 확인할 수 \n있게 해주고, 모두가 가능한 날짜로 팀플 약속을 잡게 도와주는 협업 플랫폼을 제작하였습니다.`;
+  const str2 = `소비자가 필요로 하는 구성품만을 제공하는 앨범인 토큰형 앨범을 제작하고, 이 토큰형 앨범에 대한 구매 내역을 기록하여 환경도 보존하는 온라인 앨범보관 플랫폼을 제작하였습니다.`;
+  const str3 = `종이 영수증 발급으로 발생하는 환경오염을 줄이고자 NFT와 연결하여 전자 영수증을 온라인으로 발급받을 수 있고, 영수증을 꾸며서 보관할 수 있는 프로그램을 제작하였습니다.`;
   return (
     <>
       <MainBodyWrapper>
@@ -155,42 +159,27 @@ const ProjectsPage = () => {
             Project<span style={{ color: "#0F7CA8" }}>.</span>
           </MainTitleText>
           <MainHeadText>• Assemble 🥈</MainHeadText>
-          <MainSubText>&nbsp;&nbsp;- 인하대학교 해커톤 2위 수상</MainSubText>
           <MainSubText>
-            &nbsp;&nbsp;- 구글시트와 깃허브에서 영감을 받아 팀플 과제를 할 때
-            수정된 내용과 수정자를 쉽게 확인할 수
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;있게 해주고, 모두가 가능한 날짜로 팀플
-            약속을 잡게 도와주는 협업 플랫폼을 제작하였습니다.{" "}
+            <span style={{ boxShadow: "inset 406px 0 0 0 #AFEEEE" }}>
+              인하대학교 해커톤 2위 수상
+            </span>
           </MainSubText>
+          <MainSubText>{str1}</MainSubText>
           <MainSubText />
-          <MainSubText>
-            &nbsp;&nbsp;- 활용기술: 자바스크립트, 리액트
-          </MainSubText>
+          <MainSubText>_활용기술: 자바스크립트, 리액트</MainSubText>
           <MainHeadText>• Dukku(덕꾸) 🥈</MainHeadText>
           <MainSubText>
-            &nbsp;&nbsp;- 멋쟁이 사자처럼 중앙 해커톤 은상 수상
+            <span style={{ boxShadow: "inset 406px 0 0 0 #AFEEEE" }}>
+              멋쟁이 사자처럼 중앙 해커톤 은상 수상
+            </span>
           </MainSubText>
-          <MainSubText>
-            &nbsp;&nbsp;- 소비자가 필요로 하는 구성품만을 제공하는 앨범인 토큰형
-            앨범을 제작하고, 이 토큰형 앨범 &nbsp;&nbsp;&nbsp;&nbsp; 에 대한
-            구매 내역을 기록하여 환경도 보존하는 온라인 앨범보관 플랫폼을
-            제작하였습니다.{" "}
-          </MainSubText>
+          <MainSubText>{str2}</MainSubText>
           <MainSubText />
-          <MainSubText>
-            &nbsp;&nbsp;- 활용기술: 자바스크립트, 리액트, 피그마
-          </MainSubText>
+          <MainSubText>_활용기술: 자바스크립트, 리액트, 피그마</MainSubText>
           <MainHeadText>• Ecord</MainHeadText>
-          <MainSubText>
-            &nbsp;&nbsp;- 종이 영수증 발급으로 발생하는 환경오염을 줄이고자
-            NFT와 연결하여 전자 영수증을 온라인으 &nbsp;&nbsp;&nbsp;&nbsp; 로
-            발급받을 수 있고, 영수증을 꾸며서 보관할 수 있는 프로그램을
-            제작하였습니다.{" "}
-          </MainSubText>
+          <MainSubText>{str3}</MainSubText>
           <MainSubText />
-          <MainSubText>
-            &nbsp;&nbsp;- 활용기술: 자바스크립트, 리액트, 피그마
-          </MainSubText>
+          <MainSubText>_활용기술: 자바스크립트, 리액트, 피그마</MainSubText>
         </MainImageWrapper>
       </MainBodyWrapper>
     </>
