@@ -1,6 +1,18 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import FirstModal from "../../ModalPage/FirstModal";
+import SecondModal from "../../ModalPage/SecondModal";
+import ThirdModal from "../../ModalPage/ThirdModal";
+import FourthModal from "../../ModalPage/FourthModal";
+import FifthModal from "../../ModalPage/FifthModal";
+import SixthModal from "../../ModalPage/SixthModal";
+import SeventhModal from "../../ModalPage/SeventhModal";
+import EighthModal from "../../ModalPage/EighthModal";
+import NinethModal from "../../ModalPage/NinethModal";
+import TenthModal from "../../ModalPage/TenthModal";
+import EleventhModal from "../../ModalPage/EleventhModal";
+import TwelvethModal from "../../ModalPage/TwelvthModal";
+import ThirteenthModal from "../../ModalPage/ThirteenthModal";
 import mainImage from "../../Assets/profile.jpg";
 import blogImage from "../../Assets/blog.png";
 import arrow from "../../Assets/arrow.png";
@@ -9,6 +21,19 @@ import sessionImage from "../../Assets/sessionImage.png";
 import assemble from "../../Assets/assemble.png";
 import dukku from "../../Assets/dukku.png";
 import ecord from "../../Assets/ecord.png";
+import image1 from "../../Assets/image1.jpeg";
+import image2 from "../../Assets/image2.jpg";
+import image3 from "../../Assets/image3.JPG";
+import image4 from "../../Assets/image4.jpg";
+import image5 from "../../Assets/image5.jpg";
+import image6 from "../../Assets/image6.JPG";
+import image7 from "../../Assets/image7.jpg";
+import image8 from "../../Assets/image8.jpg";
+import image9 from "../../Assets/image9.jpg";
+import image10 from "../../Assets/image10.jpg";
+import image11 from "../../Assets/image11.JPG";
+import image12 from "../../Assets/image12.JPG";
+import image13 from "../../Assets/image13.JPG";
 import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -17,6 +42,8 @@ const urlAssemble = "https://github.com/Likelion-Inha-10/Assemble-Front";
 const urlDukku = "https://github.com/Likelion-Inha-10/Duckku-fe";
 const urlEcord =
   "https://github.com/Ecord-2023-super-challenge-hackathon/ecord-frontend";
+const urlSession =
+  "https://velog.io/@jaeochoiii/%EB%A9%8B%EC%9F%81%EC%9D%B4-%EC%82%AC%EC%9E%90%EC%B2%98%EB%9F%BC-JS%EA%B8%B0%EB%B3%B8-%EC%84%B8%EC%85%98";
 const urlMentor =
   "https://velog.io/@jaeochoiii/%EB%81%84%EC%A0%81%EB%81%84%EC%A0%81-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%B5%ED%95%99%EA%B3%BC-%EB%A9%98%ED%86%A0%EB%A7%81-%ED%9B%84%EA%B8%B0";
 
@@ -59,6 +86,27 @@ const MainBodyText = styled.div`
   font-size: 46px;
   color: white;
   margin-bottom: 20px;
+  opacity: 0.9999;
+  animation: fadeIna 2s;
+  @keyframes fadeIna {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+`;
+
+const MainBodyText2 = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap");
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 46px;
+  color: white;
+  margin-top: 10px;
   opacity: 0.9999;
   animation: fadeIna 2s;
   @keyframes fadeIna {
@@ -236,12 +284,26 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: row nowrap;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 const ActiveWrapper = styled.img`
   width: 500px;
   height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 10px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+`;
+
+const ActiveWrapper2 = styled.img`
+  width: 300px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,16 +335,11 @@ const TeachText = styled.div`
 `;
 
 const MainPage = () => {
-  const onClickHome = () => {
-    navigate("/");
-  };
-
-  const onClickGithub = () => {
-    window.open(urlGithub);
-  };
-
   const onClickVelog = () => {
     window.open(urlVelog);
+  };
+  const onClickGithub = () => {
+    window.open(urlGithub);
   };
 
   const onClickAssemble = () => {
@@ -301,18 +358,76 @@ const MainPage = () => {
     window.open(urlMentor);
   };
 
-  const navigate = useNavigate();
-
-  const onClickActivies = () => {
-    navigate("/ActivePage");
-  };
-
-  const onClickProjects = () => {
-    navigate("/ProjectPage");
+  const onClickSession = () => {
+    window.open(urlSession);
   };
 
   let options = {
-    anchors: ["sectionOne", "sectionTwo", "sectionThree", "sectionFour"],
+    anchors: [
+      "sectionOne",
+      "sectionTwo",
+      "sectionThree",
+      "sectionFour",
+      "sectionFive",
+      "sectionSix",
+    ],
+  };
+
+  const [isOpen1, setIsOpen1] = useState(false);
+  const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpen3, setIsOpen3] = useState(false);
+  const [isOpen4, setIsOpen4] = useState(false);
+  const [isOpen5, setIsOpen5] = useState(false);
+  const [isOpen6, setIsOpen6] = useState(false);
+  const [isOpen7, setIsOpen7] = useState(false);
+  const [isOpen8, setIsOpen8] = useState(false);
+  const [isOpen9, setIsOpen9] = useState(false);
+  const [isOpen10, setIsOpen10] = useState(false);
+  const [isOpen11, setIsOpen11] = useState(false);
+  const [isOpen12, setIsOpen12] = useState(false);
+  const [isOpen13, setIsOpen13] = useState(false);
+
+  const onClickButton1 = () => {
+    setIsOpen1(true);
+  };
+
+  const onClickButton2 = () => {
+    setIsOpen2(true);
+  };
+
+  const onClickButton3 = () => {
+    setIsOpen3(true);
+  };
+
+  const onClickButton4 = () => {
+    setIsOpen4(true);
+  };
+  const onClickButton5 = () => {
+    setIsOpen5(true);
+  };
+  const onClickButton6 = () => {
+    setIsOpen6(true);
+  };
+  const onClickButton7 = () => {
+    setIsOpen7(true);
+  };
+  const onClickButton8 = () => {
+    setIsOpen8(true);
+  };
+  const onClickButton9 = () => {
+    setIsOpen9(true);
+  };
+  const onClickButton10 = () => {
+    setIsOpen10(true);
+  };
+  const onClickButton11 = () => {
+    setIsOpen11(true);
+  };
+  const onClickButton12 = () => {
+    setIsOpen12(true);
+  };
+  const onClickButton13 = () => {
+    setIsOpen13(true);
   };
 
   return (
@@ -321,27 +436,67 @@ const MainPage = () => {
         <Section>
           <MainBodyWrapper>
             <CategoryBodyWrapper>
-              <CategoryContent onClick={onClickHome}>
-                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              <CategoryContent>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategoryContent onClick={onClickGithub}>
                 Github
                 <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
               </CategoryContent>
-              <CategoryContent onClick={onClickVelog}>
-                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
-              <CategoryContent onClick={onClickProjects}>
-                Project
-                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#2
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
-              <CategoryContent onClick={onClickActivies}>
-                Activies
-                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              <CategoryContent>
+                <a
+                  href="#sectionFour"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#3
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFive"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategorySubContent
                 style={{
-                  paddingTop: 50,
+                  paddingTop: 20,
                 }}
               >
                 chlwodh0716@gmail.com
@@ -385,21 +540,62 @@ const MainPage = () => {
           <MainBodyWrapper style={{ backgroundColor: "white" }}>
             <CategoryBodyWrapper>
               <CategoryContent>
-                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategoryContent onClick={onClickGithub}>
-                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickVelog}>
-                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickProjects}>
-                Project
+                Github
                 <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
               </CategoryContent>
-              <CategoryContent onClick={onClickActivies}>
-                Activies
-                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#2
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFour"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#3
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFive"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategorySubContent
                 style={{
@@ -448,21 +644,382 @@ const MainPage = () => {
           <MainBodyWrapper style={{ backgroundColor: "#16161c" }}>
             <CategoryBodyWrapper>
               <CategoryContent>
-                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategoryContent onClick={onClickGithub}>
-                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickVelog}>
-                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickProjects}>
-                Project
+                Github
                 <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
               </CategoryContent>
-              <CategoryContent onClick={onClickActivies}>
-                Activies
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#2
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFour"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#3
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFive"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper>
+              <MainBodyText style={{ fontSize: 60 }}>
+                우아한테크코스 2번문항 증빙 자료
+              </MainBodyText>
+              <ImageWrapper>
+                <ActiveWrapper
+                  src={image1}
+                  onClick={onClickButton1}
+                ></ActiveWrapper>
+                {isOpen1 && (
+                  <FirstModal
+                    open={isOpen1}
+                    onClose={() => {
+                      setIsOpen1(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper
+                  src={image3}
+                  onClick={onClickButton2}
+                ></ActiveWrapper>
+                {isOpen2 && (
+                  <SecondModal
+                    open={isOpen2}
+                    onClose={() => {
+                      setIsOpen2(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+              <ImageWrapper>
+                <ActiveWrapper
+                  src={image4}
+                  onClick={onClickButton3}
+                ></ActiveWrapper>
+                {isOpen3 && (
+                  <ThirdModal
+                    open={isOpen3}
+                    onClose={() => {
+                      setIsOpen3(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper
+                  src={image10}
+                  onClick={onClickButton4}
+                ></ActiveWrapper>
+                {isOpen4 && (
+                  <FourthModal
+                    open={isOpen4}
+                    onClose={() => {
+                      setIsOpen4(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+            </MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper style={{ backgroundColor: "#16161c" }}>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github
                 <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#2
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFour"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#3
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFive"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper>
+              <MainBodyText2 style={{ fontSize: 60 }}>
+                우아한테크코스 3번문항 증빙 자료
+              </MainBodyText2>
+              <ImageWrapper>
+                <ActiveWrapper2
+                  src={image11}
+                  onClick={onClickButton5}
+                ></ActiveWrapper2>
+                {isOpen5 && (
+                  <FifthModal
+                    open={isOpen5}
+                    onClose={() => {
+                      setIsOpen5(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper2
+                  src={image12}
+                  onClick={onClickButton6}
+                ></ActiveWrapper2>
+                {isOpen6 && (
+                  <SixthModal
+                    open={isOpen6}
+                    onClose={() => {
+                      setIsOpen6(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper2
+                  src={image13}
+                  onClick={onClickButton7}
+                ></ActiveWrapper2>
+                {isOpen7 && (
+                  <SeventhModal
+                    open={isOpen7}
+                    onClose={() => {
+                      setIsOpen7(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+              <ImageWrapper>
+                <ActiveWrapper2
+                  src={image7}
+                  onClick={onClickButton8}
+                ></ActiveWrapper2>
+                {isOpen8 && (
+                  <EighthModal
+                    open={isOpen8}
+                    onClose={() => {
+                      setIsOpen8(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper2
+                  src={image8}
+                  onClick={onClickButton9}
+                ></ActiveWrapper2>
+                {isOpen9 && (
+                  <NinethModal
+                    open={isOpen9}
+                    onClose={() => {
+                      setIsOpen9(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper2
+                  src={image5}
+                  onClick={onClickButton10}
+                ></ActiveWrapper2>
+                {isOpen10 && (
+                  <TenthModal
+                    open={isOpen10}
+                    onClose={() => {
+                      setIsOpen10(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+              <ImageWrapper>
+                <ActiveWrapper2
+                  src={image9}
+                  onClick={onClickButton11}
+                ></ActiveWrapper2>
+                {isOpen11 && (
+                  <EleventhModal
+                    open={isOpen11}
+                    onClose={() => {
+                      setIsOpen11(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper2
+                  src={image2}
+                  onClick={onClickButton12}
+                ></ActiveWrapper2>
+                {isOpen12 && (
+                  <TwelvethModal
+                    open={isOpen12}
+                    onClose={() => {
+                      setIsOpen12(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper2
+                  src={image6}
+                  onClick={onClickButton13}
+                ></ActiveWrapper2>
+                {isOpen13 && (
+                  <ThirteenthModal
+                    open={isOpen13}
+                    onClose={() => {
+                      setIsOpen13(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+            </MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper style={{ backgroundColor: "#16161c" }}>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#2
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFour"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#3
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFive"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategorySubContent
                 style={{
@@ -484,22 +1041,30 @@ const MainPage = () => {
                 ></ActiveWrapper>
                 <ActiveTextWrapper>
                   <TeachText>
-                    개발자, 혹은 컴퓨터공학과 진학을 꿈꾸는 많은 학생들에게 학과
-                    소개 및 다양한 실습활동을 통해 진로를 선택하는 과정에서
-                    도움이 되고자 노력하였습니다. Deep한 내용보다는 눈높이에
-                    맞는 수업으로 학생들의 흥미를 유발하고자 하였습니다.
+                    개발자, 컴퓨터공학과 진학을 꿈꾸는 많은 학생들에게 학과 소개
+                    및 다양한 실습활동을 통해 진로 선택 과정에 도움이 되고자
+                    노력하였습니다. Deep한 내용보다는 눈높이에 맞는 수업으로
+                    학생의 흥미를 유발하고자 하였습니다.{" "}
+                    <span style={{ color: "#fcba03" }}>
+                      왼쪽 사진을 클릭하면 더 자세한 글을 확인할 수 있습니다.
+                    </span>
                   </TeachText>
                 </ActiveTextWrapper>
               </ImageWrapper>
               <ImageWrapper>
-                <ActiveWrapper src={sessionImage}></ActiveWrapper>
+                <ActiveWrapper
+                  src={sessionImage}
+                  onClick={onClickSession}
+                ></ActiveWrapper>
                 <ActiveTextWrapper>
                   <TeachText>
-                    프론트 엔드 개발자가 되기 위해서는 자바스크립트를 필수적으로
-                    알아야 합니다. 반복문, 조건문과 같은 기본적인 내용부터
-                    함수와 객체같은 심화적인 내용까지 이론과 실습 강의를
-                    진행하였습니다. 기본이 중요한만큼 책임감을 갖고 세션을
-                    진행하여 노력하였습니다.
+                    프론트엔드 개발자가 되기 위해서는 자바스크립트를 필수적으로
+                    알아야 합니다. 연산자, 반복문, 조건문과 같은 기본적인
+                    내용부터 함수, 객체와 같은 심화적인 내용까지 이론과 실습
+                    강의를 병행하여 책임감 있게 진행하였습니다.{" "}
+                    <span style={{ color: "#fcba03" }}>
+                      왼쪽 사진을 클릭하면 더 자세한 글을 확인할 수 있습니다.
+                    </span>
                   </TeachText>
                 </ActiveTextWrapper>
               </ImageWrapper>
@@ -510,21 +1075,62 @@ const MainPage = () => {
           <MainBodyWrapper>
             <CategoryBodyWrapper>
               <CategoryContent>
-                Home<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategoryContent onClick={onClickGithub}>
-                Github<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickVelog}>
-                Velog<span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-              </CategoryContent>
-              <CategoryContent onClick={onClickProjects}>
-                Project
+                Github
                 <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
               </CategoryContent>
-              <CategoryContent onClick={onClickActivies}>
-                Activies
-                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#2
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFour"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Proof#3
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionFive"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
               </CategoryContent>
               <CategorySubContent
                 style={{
