@@ -42,7 +42,8 @@ const ModalWrap = styled.div`
   height: fit-content;
   border-radius: 15px;
   background-color: #fff;
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
@@ -62,6 +63,7 @@ const Contents = styled.div`
   }
   img {
     margin-top: 20px;
+    border-radius: 15px;
     width: 450px;
   }
 `;
