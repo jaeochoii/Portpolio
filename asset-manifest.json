@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/Portpolio/static/css/main.1c0e51a8.css",
-    "main.js": "/Portpolio/static/js/main.79b1004b.js",
+    "main.js": "/Portpolio/static/js/main.4823979b.js",
     "static/js/988.5e096ed0.chunk.js": "/Portpolio/static/js/988.5e096ed0.chunk.js",
     "static/media/sessionImage.png": "/Portpolio/static/media/sessionImage.7e06c7194df68f01fef2.png",
     "static/media/mentorImage.png": "/Portpolio/static/media/mentorImage.7aeedc3d090f14118c56.png",
     "static/media/image9.jpg": "/Portpolio/static/media/image9.3a2737806e6adcb13d9c.jpg",
-    "static/media/image2.jpg": "/Portpolio/static/media/image2.bdbfcecd0da3c827c368.jpg",
     "static/media/image8.jpg": "/Portpolio/static/media/image8.79ff43e55108bfe9982c.jpg",
     "static/media/image5.jpg": "/Portpolio/static/media/image5.b95dd32d2ba66d40a8ec.jpg",
     "static/media/image7.jpg": "/Portpolio/static/media/image7.e33c56fcad66c27c9f8c.jpg",
@@ -21,6 +20,7 @@
     "static/media/image11.JPG": "/Portpolio/static/media/image11.76bd4d4869f76e306026.JPG",
     "static/media/no2.png": "/Portpolio/static/media/no2.66b72f41cbdeff20fbbb.png",
     "static/media/image13.JPG": "/Portpolio/static/media/image13.9229cdeb9673536f1240.JPG",
+    "static/media/image2.jpg": "/Portpolio/static/media/image2.866c48dc31fa2793beeb.jpg",
     "static/media/image1.jpeg": "/Portpolio/static/media/image1.62a73d0d86f5ab35799f.jpeg",
     "static/media/dukku.png": "/Portpolio/static/media/dukku.4ade842fbc64c007a15f.png",
     "static/media/image12.JPG": "/Portpolio/static/media/image12.071f1367054d705ad945.JPG",
@@ -29,11 +29,11 @@
     "static/media/no3.png": "/Portpolio/static/media/no3.7329f0b009e14e1df586.png",
     "index.html": "/Portpolio/index.html",
     "main.1c0e51a8.css.map": "/Portpolio/static/css/main.1c0e51a8.css.map",
-    "main.79b1004b.js.map": "/Portpolio/static/js/main.79b1004b.js.map",
+    "main.4823979b.js.map": "/Portpolio/static/js/main.4823979b.js.map",
     "988.5e096ed0.chunk.js.map": "/Portpolio/static/js/988.5e096ed0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c0e51a8.css",
-    "static/js/main.79b1004b.js"
+    "static/js/main.4823979b.js"
   ]
 }
