@@ -12,7 +12,7 @@ function Modal({ onClose, children }) {
   useEffect(() => {
     const $body = document.querySelector("body");
     $body.style.overflow = "hidden";
-    return () => ($body.style.overflow = "auto");
+    return () => ($body.style.overflow = "hidden");
   }, []);
   return (
     <ModalContainer>

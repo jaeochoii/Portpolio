@@ -1233,6 +1233,9 @@ const MainPage = () => {
               <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
             </CategoryBodyWrapper>
             <MainImageWrapper>
+              <MainBodyText style={{ fontSize: 60, paddingTop: 20 }}>
+                그동안 해왔던 프로젝트
+              </MainBodyText>
               <ImageWrapper style={{ height: 250 }}>
                 <ActiveWrapper
                   src={assemble}
