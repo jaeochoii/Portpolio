@@ -13,6 +13,10 @@ import TenthModal from "../../ModalPage/TenthModal";
 import EleventhModal from "../../ModalPage/EleventhModal";
 import TwelvethModal from "../../ModalPage/TwelvthModal";
 import ThirteenthModal from "../../ModalPage/ThirteenthModal";
+import FourteenModal from "../../ModalPage/FourteenModal";
+import FifteenModal from "../../ModalPage/FifteenModal";
+import SixteenModal from "../../ModalPage/SixteenModal";
+import SeventeenModal from "../../ModalPage/SeventeenModal";
 import mainImage from "../../Assets/profile.jpg";
 import blogImage from "../../Assets/blog.png";
 import arrow from "../../Assets/arrow.png";
@@ -24,16 +28,20 @@ import ecord from "../../Assets/ecord.png";
 import image1 from "../../Assets/image1.jpeg";
 import image2 from "../../Assets/image2.jpg";
 import image3 from "../../Assets/image3.JPG";
-import image4 from "../../Assets/image4.jpg";
+import image4 from "../../Assets/no2.png";
 import image5 from "../../Assets/image5.jpg";
 import image6 from "../../Assets/image6.JPG";
 import image7 from "../../Assets/image7.jpg";
 import image8 from "../../Assets/image8.jpg";
 import image9 from "../../Assets/image9.jpg";
-import image10 from "../../Assets/image10.jpg";
+import image10 from "../../Assets/no2_1.gif";
 import image11 from "../../Assets/image11.JPG";
 import image12 from "../../Assets/image12.JPG";
 import image13 from "../../Assets/image13.JPG";
+import image14 from "../../Assets/no3.png";
+import image15 from "../../Assets/no3_1.png";
+import image16 from "../../Assets/no3_2.png";
+import image17 from "../../Assets/no3_3.png";
 import { SectionsContainer, Section } from "react-fullpage";
 
 const urlGithub = "https://github.com/jaeochoii";
@@ -370,6 +378,7 @@ const MainPage = () => {
       "sectionFour",
       "sectionFive",
       "sectionSix",
+      "sectionSeven",
     ],
   };
 
@@ -386,6 +395,10 @@ const MainPage = () => {
   const [isOpen11, setIsOpen11] = useState(false);
   const [isOpen12, setIsOpen12] = useState(false);
   const [isOpen13, setIsOpen13] = useState(false);
+  const [isOpen14, setIsOpen14] = useState(false);
+  const [isOpen15, setIsOpen15] = useState(false);
+  const [isOpen16, setIsOpen16] = useState(false);
+  const [isOpen17, setIsOpen17] = useState(false);
 
   const onClickButton1 = () => {
     setIsOpen1(true);
@@ -429,6 +442,18 @@ const MainPage = () => {
   const onClickButton13 = () => {
     setIsOpen13(true);
   };
+  const onClickButton14 = () => {
+    setIsOpen14(true);
+  };
+  const onClickButton15 = () => {
+    setIsOpen15(true);
+  };
+  const onClickButton16 = () => {
+    setIsOpen16(true);
+  };
+  const onClickButton17 = () => {
+    setIsOpen17(true);
+  };
 
   return (
     <>
@@ -463,22 +488,13 @@ const MainPage = () => {
                   href="#sectionThree"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  Proof#2
+                  증빙자료
                   <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
                 </a>
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionFour"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Proof#3
-                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-                </a>
-              </CategoryContent>
-              <CategoryContent>
-                <a
-                  href="#sectionFive"
+                  href="#sectionSix"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Mentoring
@@ -487,7 +503,7 @@ const MainPage = () => {
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionSix"
+                  href="#sectionSeven"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects
@@ -566,22 +582,13 @@ const MainPage = () => {
                   href="#sectionThree"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  Proof#2
+                  증빙자료
                   <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
                 </a>
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionFour"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Proof#3
-                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-                </a>
-              </CategoryContent>
-              <CategoryContent>
-                <a
-                  href="#sectionFive"
+                  href="#sectionSix"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Mentoring
@@ -590,7 +597,7 @@ const MainPage = () => {
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionSix"
+                  href="#sectionSeven"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects
@@ -670,22 +677,13 @@ const MainPage = () => {
                   href="#sectionThree"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  Proof#2
+                  증빙자료
                   <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
                 </a>
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionFour"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Proof#3
-                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-                </a>
-              </CategoryContent>
-              <CategoryContent>
-                <a
-                  href="#sectionFive"
+                  href="#sectionSix"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Mentoring
@@ -694,7 +692,7 @@ const MainPage = () => {
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionSix"
+                  href="#sectionSeven"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects
@@ -799,22 +797,13 @@ const MainPage = () => {
                   href="#sectionThree"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  Proof#2
+                  증빙자료
                   <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
                 </a>
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionFour"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Proof#3
-                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-                </a>
-              </CategoryContent>
-              <CategoryContent>
-                <a
-                  href="#sectionFive"
+                  href="#sectionSix"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Mentoring
@@ -823,7 +812,7 @@ const MainPage = () => {
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionSix"
+                  href="#sectionSeven"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects
@@ -990,22 +979,13 @@ const MainPage = () => {
                   href="#sectionThree"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  Proof#2
+                  증빙자료
                   <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
                 </a>
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionFour"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Proof#3
-                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-                </a>
-              </CategoryContent>
-              <CategoryContent>
-                <a
-                  href="#sectionFive"
+                  href="#sectionSix"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Mentoring
@@ -1014,7 +994,127 @@ const MainPage = () => {
               </CategoryContent>
               <CategoryContent>
                 <a
+                  href="#sectionSeven"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Projects
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategorySubContent
+                style={{
+                  paddingTop: 50,
+                }}
+              >
+                chlwodh0716@gmail.com
+              </CategorySubContent>
+              <CategorySubContent>@uh_jaeo_neul</CategorySubContent>
+            </CategoryBodyWrapper>
+            <MainImageWrapper>
+              <MainBodyText style={{ fontSize: 60 }}>
+                우아한테크코스 4번문항 증빙 자료
+              </MainBodyText>
+              <ImageWrapper>
+                <ActiveWrapper
+                  src={image14}
+                  onClick={onClickButton14}
+                ></ActiveWrapper>
+                {isOpen14 && (
+                  <FourteenModal
+                    open={isOpen14}
+                    onClose={() => {
+                      setIsOpen14(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper
+                  src={image15}
+                  onClick={onClickButton15}
+                ></ActiveWrapper>
+                {isOpen15 && (
+                  <FifteenModal
+                    open={isOpen15}
+                    onClose={() => {
+                      setIsOpen15(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+              <ImageWrapper>
+                <ActiveWrapper
+                  src={image16}
+                  onClick={onClickButton16}
+                ></ActiveWrapper>
+                {isOpen16 && (
+                  <SixteenModal
+                    open={isOpen16}
+                    onClose={() => {
+                      setIsOpen16(false);
+                    }}
+                  />
+                )}
+                <ActiveWrapper
+                  src={image17}
+                  onClick={onClickButton17}
+                ></ActiveWrapper>
+                {isOpen17 && (
+                  <SeventeenModal
+                    open={isOpen17}
+                    onClose={() => {
+                      setIsOpen17(false);
+                    }}
+                  />
+                )}
+              </ImageWrapper>
+            </MainImageWrapper>
+          </MainBodyWrapper>
+        </Section>
+        <Section>
+          <MainBodyWrapper style={{ backgroundColor: "#16161c" }}>
+            <CategoryBodyWrapper>
+              <CategoryContent>
+                <a
+                  href="#sectionOne"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Home
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent onClick={onClickGithub}>
+                Github
+                <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionTwo"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Velog
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionThree"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  증빙자료
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
                   href="#sectionSix"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  Mentoring
+                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
+                </a>
+              </CategoryContent>
+              <CategoryContent>
+                <a
+                  href="#sectionSeven"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects
@@ -1101,22 +1201,13 @@ const MainPage = () => {
                   href="#sectionThree"
                   style={{ textDecoration: "none", color: "white" }}
                 >
-                  Proof#2
+                  증빙자료
                   <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
                 </a>
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionFour"
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Proof#3
-                  <span style={{ color: "#0F7CA8", fontSize: 50 }}>.</span>
-                </a>
-              </CategoryContent>
-              <CategoryContent>
-                <a
-                  href="#sectionFive"
+                  href="#sectionSix"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Mentoring
@@ -1125,7 +1216,7 @@ const MainPage = () => {
               </CategoryContent>
               <CategoryContent>
                 <a
-                  href="#sectionSix"
+                  href="#sectionSeven"
                   style={{ textDecoration: "none", color: "white" }}
                 >
                   Projects

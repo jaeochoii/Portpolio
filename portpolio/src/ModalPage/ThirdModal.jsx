@@ -1,13 +1,13 @@
 import React from "react";
 import Modal from "../Component/Page/Modal";
 import styled from "styled-components";
-import image from "../Assets/image4.jpg";
+import image from "../Assets/no2.png";
 
 function ThirdModal({ onClose }) {
   return (
     <Modal onClose={onClose}>
       <img src={image} alt="smile" />
-      <h1>다음 해에 받게 된 star student 상</h1>
+      <h1>직접 UI 디자인한 개인 프로젝트</h1>
       <Button onClick={onClose}>Close</Button>
     </Modal>
   );
